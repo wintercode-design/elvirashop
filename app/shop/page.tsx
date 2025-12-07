@@ -99,7 +99,7 @@ const Shop = () => {
     <>
       {/* Hero */}
       <section className="bg-blush-light/30 py-12 md:py-16">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 font-display text-4xl font-semibold text-foreground md:text-5xl">
             Our Collection
           </h1>
@@ -112,7 +112,7 @@ const Shop = () => {
 
       {/* Filters */}
       <section className="border-b border-border py-4">
-        <div className="container mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="container mx-auto px-4 flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="flex items-center gap-2 overflow-x-auto">
             {categories.map((category) => (
               <Button
@@ -147,7 +147,7 @@ const Shop = () => {
 
       {/* Products Grid */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {filteredProducts.map((product, index) => (
               <div

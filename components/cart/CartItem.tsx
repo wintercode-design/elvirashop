@@ -1,5 +1,8 @@
 import { Minus, Plus, Trash2 } from "lucide-react";
-import { CartItem as CartItemType, useCart } from "@/providers/CartContext";
+import {
+  CartItem as CartItemType,
+  useCart,
+} from "@/providers/CartContextZustand";
 import Link from "next/link";
 
 interface CartItemProps {

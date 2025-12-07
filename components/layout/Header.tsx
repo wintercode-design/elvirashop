@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X, ShoppingBag, Heart, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useCart } from "@/providers/CartContext";
+import { useCart } from "@/providers/CartContextZustand";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-20 items-center justify-between">
+      <div className="container mx-auto px-4 flex h-20 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-semibold tracking-wide text-foreground md:text-3xl">
@@ -122,7 +122,7 @@ export const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="border-t border-border bg-background md:hidden">
-          <nav className="container mx-auto flex flex-col gap-4 py-6">
+          <nav className="container mx-auto px-4 flex flex-col gap-4 py-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

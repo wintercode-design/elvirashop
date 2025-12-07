@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/providers/CartContext";
+import { useCart } from "@/providers/CartContextZustand";
 import Link from "next/link";
 import { toast } from "sonner";
 

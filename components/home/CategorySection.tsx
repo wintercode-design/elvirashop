@@ -28,7 +28,7 @@ const categories = [
 export const CategorySection = () => {
   return (
     <section className="py-20 md:py-28">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 font-display text-3xl font-semibold text-foreground md:text-4xl">
             Shop by Category

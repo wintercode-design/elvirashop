@@ -6,7 +6,6 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import QueryProvider from "@/providers/queryProvider";
-import { CartProvider } from "@/providers/CartContext";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,17 +26,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.variable} antialiased`}>
         <QueryProvider>
-          <CartProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Sonner />
-              <div className="flex min-h-screen flex-col">
-                <Header />
-                <main className="flex-1">{children}</main>
-                <Footer />
-              </div>
-            </TooltipProvider>
-          </CartProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </TooltipProvider>
         </QueryProvider>
       </body>
     </html>

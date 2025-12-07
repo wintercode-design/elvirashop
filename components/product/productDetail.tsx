@@ -4,7 +4,7 @@ import { ProductInfo } from "@/components/product/ProductInfo";
 import { VariantSelector } from "@/components/product/VariantSelector";
 import { Button } from "@/components/ui/button";
 import { getProductById, products } from "@/data/products";
-import { useCart } from "@/providers/CartContext";
+import { useCart } from "@/providers/CartContextZustand";
 import { ArrowLeft, Heart, Minus, Plus, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -14,21 +14,27 @@ export default function ProductDetail(data: { id: string }) {
   const product = getProductById(data.id || "");
   const { addToCart } = useCart();
 
-  const [selectedColor, setSelectedColor] = useState("");
-  const [selectedLength, setSelectedLength] = useState("");
-  const [selectedCapSize, setSelectedCapSize] = useState("");
+  const [selectedColor, setSelectedColor] = useState(
+    product?.variants[0]?.color || ""
+  );
+  const [selectedLength, setSelectedLength] = useState(
+    product?.lengths[0] || ""
+  );
+  const [selectedCapSize, setSelectedCapSize] = useState(
+    product?.capSizes[0] || ""
+  );
   const [quantity, setQuantity] = useState(1);
 
-  useEffect(() => {}, [product]);
-  if (product) {
-    setSelectedColor(product.variants[0]?.color || "");
-    setSelectedLength(product.lengths[0] || "");
-    setSelectedCapSize(product.capSizes[0] || "");
-  }
+  // useEffect(() => {}, [product]);
+  // if (product) {
+  //   setSelectedColor(product.variants[0]?.color || "");
+  //   setSelectedLength(product.lengths[0] || "");
+  //   setSelectedCapSize(product.capSizes[0] || "");
+  // }
 
   if (!product) {
     return (
-      <div className="container mx-auto py-20 text-center">
+      <div className="container mx-auto px-4 py-20 text-center">
         <h1 className="font-display text-3xl font-semibold mb-4">
           Product Not Found
         </h1>
@@ -70,7 +76,7 @@ export default function ProductDetail(data: { id: string }) {
   return (
     <>
       {/* Breadcrumb */}
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto px-4 py-4">
         <Link
           href="/shop"
           className="inline-flex items-center gap-2 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -81,7 +87,7 @@ export default function ProductDetail(data: { id: string }) {
       </div>
 
       {/* Product Section */}
-      <section className="container mx-auto pb-16">
+      <section className="container mx-auto px-4 pb-16">
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Image Gallery */}
           <ImageGallery images={images} productName={product.name} />
@@ -159,7 +165,7 @@ export default function ProductDetail(data: { id: string }) {
 
       {/* Related Products */}
       <section className="border-t border-border bg-muted/30 py-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-8">
             You May Also Like
           </h2>

@@ -44,7 +44,7 @@ const products = [
 export const FeaturedProducts = () => {
   return (
     <section className="bg-blush-light/30 py-20 md:py-28">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row">
           <div>
             <h2 className="mb-2 font-display text-3xl font-semibold text-foreground md:text-4xl">
@@ -67,7 +67,7 @@ export const FeaturedProducts = () => {
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
               {/* Image */}
-              <Link href={`/product/${product.id}`} className="block">
+              <Link href={`/shop/${product.id}`} className="block">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={product.image}
@@ -110,7 +110,7 @@ export const FeaturedProducts = () => {
                 <span className="font-body text-xs uppercase tracking-wider text-muted-foreground">
                   {product.category}
                 </span>
-                <Link href={`/product/${product.id}`}>
+                <Link href={`/shop/${product.id}`}>
                   <h3 className="mt-1 font-display text-lg font-medium text-foreground transition-colors hover:text-primary">
                     {product.name}
                   </h3>

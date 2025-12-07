@@ -75,7 +75,7 @@ const Blog = () => {
     <>
       {/* Hero */}
       <section className="bg-blush-light/30 py-12 md:py-16">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 font-display text-4xl font-semibold text-foreground md:text-5xl">
             Hair Care Tips & Guides
           </h1>
@@ -88,7 +88,7 @@ const Blog = () => {
 
       {/* Blog Grid */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post, index) => (
               <article

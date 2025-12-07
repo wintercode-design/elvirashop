@@ -32,7 +32,7 @@ const About = () => {
     <>
       {/* Hero */}
       <section className="gradient-hero py-20 md:py-28">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1
               className="mb-6 font-display text-4xl font-semibold text-foreground md:text-5xl lg:text-6xl  animate-in fade-in"
@@ -52,7 +52,7 @@ const About = () => {
 
       {/* Story */}
       <section className="py-20 md:py-28">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div
               className=" animate-in fade-in-up"
@@ -96,7 +96,7 @@ const About = () => {
 
       {/* Values */}
       <section className="bg-blush-light/30 py-20 md:py-28">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 font-display text-3xl font-semibold text-foreground md:text-4xl">
               What Sets Us Apart
@@ -130,7 +130,7 @@ const About = () => {
 
       {/* Mission */}
       <section className="py-20 md:py-28">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 font-display text-3xl font-semibold text-foreground md:text-4xl">
               Our Mission

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const HeroSection = () => {
   return (
     <section className="relative overflow-hidden gradient-hero">
-      <div className="container mx-auto relative z-10 py-20 md:py-32">
+      <div className="container mx-auto px-4 relative z-10 py-20 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <span
             className="mb-4 inline-block font-body text-sm font-medium uppercase tracking-widest text-primary  animate-in fade-in"

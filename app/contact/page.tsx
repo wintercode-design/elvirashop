@@ -42,7 +42,7 @@ const Contact = () => {
     <>
       {/* Hero */}
       <section className="gradient-hero py-12 md:py-16">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 font-display text-4xl font-semibold text-foreground md:text-5xl">
             Get in Touch
           </h1>
@@ -55,7 +55,7 @@ const Contact = () => {
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Contact Form */}
             <div

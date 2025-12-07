@@ -2,7 +2,7 @@
 import { CartItem } from "@/components/cart/CartItem";
 import { OrderSummary } from "@/components/cart/OrderSummary";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/providers/CartContext";
+import { useCart } from "@/providers/CartContextZustand";
 import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
@@ -12,7 +12,7 @@ export default function Cart() {
   if (items.length === 0) {
     return (
       <>
-        <div className="container mx-auto py-20 text-center">
+        <div className="container mx-auto px-4 py-20 text-center">
           <div className="mx-auto max-w-md">
             <div className="mb-6 flex justify-center">
               <div className="rounded-full bg-muted p-6">
@@ -38,7 +38,7 @@ export default function Cart() {
 
   return (
     <>
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground">

@@ -19,7 +19,7 @@ export const NewsletterSection = () => {
 
   return (
     <section className="relative overflow-hidden bg-primary py-20 md:py-28">
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4 font-display text-3xl font-semibold text-primary-foreground md:text-4xl">
             Join the Empire

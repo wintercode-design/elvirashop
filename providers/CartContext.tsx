@@ -44,14 +44,26 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 const CART_STORAGE_KEY = "elvira-empire-cart";
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [items, setItems] = useState<CartItem[]>(() => {
-    const stored = localStorage.getItem(CART_STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
-  });
+  const [items, setItems] = useState<CartItem[]>([]);
 
+  // Load localStorage (client-side only)
   useEffect(() => {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+    const stored = localStorage.getItem(CART_STORAGE_KEY);
+    if (stored) {
+      setItems(JSON.parse(stored));
+    }
+  }, []);
+
+  // Save cart to localStorage
+  useEffect(() => {
+    if (items.length >= 0) {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+    }
   }, [items]);
+
+  // useEffect(() => {
+  //   localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+  // }, [items]);
 
   const addToCart = (newItem: CartItem) => {
     setItems((prev) => {
